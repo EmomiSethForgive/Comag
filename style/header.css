@@ -1,0 +1,92 @@
+k.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* padding: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
+    border: 2px solid rebeccapurple; */
+}
+
+.header__header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0px 0px 0px 7px;
+}
+
+.logo{
+    width:40px;
+    height:34px;
+}
+
+.nomlogo{
+   font-weight: bold; 
+   color: rgb(var(--primary-color));
+}
+
+.header__menu{
+    display: flex;
+    margin: 0px 7px 0px 0px;
+}
+
+.menu{
+
+}
+
+.section1{
+    background-image: url(../../Assets/Images/Socials/fon.svg);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 261px;
+    gap: 52px;
+}
+
+.section1__texte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%
+}
+
+.section1__h1{
+    font-weight: bold;
+    text-align: center;
+    color: rgb(var(--primary-color));
+}
+
+.section1__p{
+    color: rgb(var(--primary-color));
+}
+
+.section1__but-inscrire{
+    font-size: 16px;
+    background-color: rgb(var(--troixième-color));
+    color: rgb(var(--secondary-color));
+    border: none;
+    width: 75px;
+    height: 26px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.section1__but-inscrire:hover{
+    background-color: rgb(var(--troixième-color), 0.7);
+}
+
+
+

@@ -1,0 +1,32 @@
+
+@import url(./body-html.css);
+
+@import url(./header.css);
+
+@import url(./main.css);
+
+@import url(./footer.css);
+
+/* @import url(./responsive/mobile.css);
+
+@import url(./responsive/tablette.css); */
+
+
+
+:root{
+
+    --primary-color: 0, 0, 0;
+
+    --secondary-color: 255, 255, 255;
+
+    --troixième-color: 58, 114, 79;
+
+    --quatrième-color: 198, 198, 198;
+
+
+    --headline-font-size: 48px;
+
+    --subheadline-font-size: 24px;
+
+    --Bodyline-font-size: 14px;
+}
