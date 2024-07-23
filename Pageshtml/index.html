@@ -33,6 +33,27 @@
           </div>
      </form>
    </div>
+
+   <script>
+      
+// Sélectionne le formulaire avec la classe 'form'
+const form = document.querySelector('.form');
+
+// Ajoute un écouteur d'événement pour la soumission du formulaire
+form.addEventListener('submit', (event) => {
+    // Empêche le comportement par défaut du formulaire (rechargement de la page)
+    event.preventDefault();
+
+    // Sélectionne tous les champs d'entrée avec la classe 'input'
+    const inputs = document.querySelectorAll('.input');
+
+    // Parcourt chaque champ d'entrée trouvé
+    inputs.forEach(input => {
+        // Affiche la valeur de chaque champ dans la console
+        console.log(input.value);
+    });
+});
+   </script>
     
 </body>
 </html>
