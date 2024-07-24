@@ -27,12 +27,12 @@
             <input type="...">
             <p>Email:</p>
             <input type="...">
-            <p>Sujet:</p>
+            <p>Titre du projet:</p>
             <input type="...">
-            <p>message</p>
+            <p>Declinez votre projet:</p>
             <textarea name="message" id=""></textarea>
-            <a href=""><img src="./asset/Frame 90.svg" alt="" class="link"></a>
-            <button>Envoyer</button>
+            <img src="./asset/Frame 90.svg" alt="" onclick="openCamera()">
+            <button id="envoyer">Envoyer</button>
         </section>
      </main>
      <footer>
@@ -44,5 +44,31 @@
             <img src="./asset/logoipsum-330 2.svg" alt="">
         </div>
      </footer>
+     <script>
+     const btnEnvoyer = document.getElementById('envoyer');
+
+btnEnvoyer.addEventListener('click', () => {
+  alert('Votre enregistrement s\'est fait avec succès, nous vous enverrons les résultats dans les 48 heures qui suivent.');
+});
+
+// bouton scan
+function openCamera() {
+            if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+                navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment'}})
+                    .then(function(stream) {
+                        const video = document.createElement('video');
+                        document.body.appendChild(video);
+                        video.srcObject = stream;
+                        video.play();
+                    })
+                    .catch(function(error) {
+                        console.error("Erreur d'accès à la caméra:", error);
+                        alert("Impossible d'accéder à la caméra. Veuillez vérifier les permissions.");
+                    });
+            } else {
+                alert("Désolé, votre navigateur ne supporte pas l'accès à la caméra.");
+            }
+        }
+     </script>
 </body>
 </html>
