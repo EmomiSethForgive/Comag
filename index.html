@@ -32,18 +32,18 @@
           <div class="section2_1 sec">
               <img src="./Assets/Images/Socials/imag1.svg" alt="imag1" class="section2_img">
               <h2 class="section2_h2">Obtenez dés à présent votre <br />agrément de commerce</h2>
-              <a href=""><button class="section2_button">Commencer</button></a>
+              <a href="./commerce.html"><button class="section2_button">Commencer</button></a>
           </div>
           <div class="section2_1">
               <img src="./Assets/Images/Socials/imag2.svg" alt="imag1" class="section2_img">
               <h2 class="section2_h2">Obtenez dés à présent votre <br />agrément de transport </h2>
-              <a href=""><button class="section2_button">Commencer</button></a>
+              <a href="./transport.html"><button class="section2_button">Commencer</button></a>
           </div> 
       </section>
       <section class="section3">
           <h2 class="section3-txt">Consulter dés à présent une <br /> microfinance pour soutenir <br/> vos projet</h2>
           <img src="./Assets/Images/Socials/imag3.svg" alt="imag3" class="section3-img">
-          <button class="section3-button">Consulter</button>
+          <a href="./assurance.html"><button class="section3-button">Consulter</button></a>
       </section>
   </main>
   <footer class="footer">
@@ -62,6 +62,41 @@
           </div>
       </div>
   </footer>
+
+  <script>
+
+const animateMaincontent = () => {
+
+const elementToanimate = [
+    { selector: ".section1__h1", transform: false},
+    { selector: ".section1__p", transform: false},
+    { selector: ".section1__but-inscrire", transform: false},
+]
+
+const animateElement = (element, delay = 0, transform = false) => {
+    setTimeout(() => {
+        element.style.opacity = 1;
+        if (transform) {
+            element.style.transform = "translateY(0)"
+        }
+        
+    }, delay);
+}
+
+elementToanimate.forEach ((item, index) =>{
+    const element = item.element || document.querySelector(item.selector);
+
+    if (element){
+        animateElement (element, index * 1500, item.transform)  
+    }
+})
+
+}
+
+animateMaincontent ()
+
+
+  </script>
    
   </body>
 </html>

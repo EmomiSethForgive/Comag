@@ -10,7 +10,7 @@
     white-space: nowrap; /* Empêche les éléments de sauter à la ligne */
     display: flex;
     height: 268px;
-    gap: 30px;
+    gap: 50px;
     align-items: center;
 }
 
